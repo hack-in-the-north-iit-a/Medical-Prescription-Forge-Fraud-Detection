@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+<img src="rod.png" alt="Mountain View" style="width:250px;height:300px;">
+head {
+  position: absolute
+  
+}
+
+html {
+  font-family: "Arial";
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+  margin: 0;
+	height: 100pt;
+  color: white;
+	background-size:cover;
+	background-position: center;
+  background-image: url("background.jpeg");
+
+}
+
+#form-title {
+  text-align: center;
+}
+
+input {
+  height:150%;
+  font-size:25pt;
+  text-align: left;
+}
+
+#form-item {
+  font-family: "Arial", sans-serif;
+  margin-left: 3%;
+  font-size: 200%;
+  text-align: center;
+}
+
+#form-item input {
+  margin-left: 25%;
+}
+
+#form-item label {
+  position: absolute;
+}
+
+#submit-button {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#submit-button:hover {
+  background-color: black; /* Green */
+  color: white;
+}
+
+.a {
+  float: left;
+  margin-left: 300px;
+}
+
+.centered thick-border {
+        border: 3px white;
+        border-collapse: collapse;
+        margin-left: 300px;
+}
