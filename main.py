@@ -3,6 +3,7 @@ import json
 import addRecord
 import deleteScript
 import getRecord
+import requests
 
 app = Flask(__name__)
 
@@ -21,6 +22,10 @@ def index():
     print("ID: ",id.json())
 
     return render_template('gui.html')
+
+@app.route('/home', methods = ['GET', 'POST'])
+def home():
+    return render_template('main.html')
 
 @app.route('/check', methods=['GET', 'POST'])
 def check():
@@ -42,6 +47,15 @@ def issue():
     deleteScript.deleteRecord(id)
 
     return render_template('Output.html')
+
+@app.route('/getall',  methods=['GET', 'POST'])
+def getall():
+    payload = {'X-Username': 'kushal.jhunjhunwalla@gmail.com', 'X-Api-Key' : 'QKGs+DurASnHUPuR21MyiONYYR3XAtOKtOf04xYzUIA=',
+            'Content-Type': 'application/json'}
+    url = " https://api.tierion.com/v1/records?datastoreId=7132"
+    response = requests.get(url, headers = payload)
+    print("RES: ",response.json())
+    return None
 
 if __name__ == '__main__':
     app.run(debug=True)
